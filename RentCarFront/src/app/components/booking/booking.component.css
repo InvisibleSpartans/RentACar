@@ -1,9 +1,15 @@
+
 .example-container {
     display: flex;
     flex-direction: column;
+    padding-left: 25%;
+    padding-right: 25%;
   }
   
   .example-container > * {
     width: 100%;
   }
-  
+
+  h1{
+    text-align: center;
+  }

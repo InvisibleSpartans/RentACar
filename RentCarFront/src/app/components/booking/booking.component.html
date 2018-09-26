@@ -1,33 +1,75 @@
 <div class="example-container">
+    <h1>Tell us your Starting Point</h1>
     <mat-form-field>
-      <input matInput placeholder="Input">
+        <mat-select placeholder="Select Your City">
+          <mat-option value="option">Delhi NCR</mat-option>
+          <mat-option value="option">Hyderabad</mat-option>
+          <mat-option value="option">Visakhapatnam</mat-option>
+        </mat-select>
     </mat-form-field>
-  
     <mat-form-field>
-      <textarea matInput placeholder="Textarea"></textarea>
+        <input matInput placeholder="Enter Starting Point">
     </mat-form-field>
-  
-    <mat-form-field>
-      <mat-select placeholder="Select">
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
 
+      <mat-checkbox class="mat-checkbox-layout" [(ngModel)]="checked">I want to drop my car in a different city</mat-checkbox>
+    <br>
+        <mat-form-field *ngIf="checked">
+            <mat-select placeholder="Select Your City">
+              <mat-option value="option">Delhi NCR</mat-option>
+              <mat-option value="option">Hyderabad</mat-option>
+              <mat-option value="option">Visakhapatnam</mat-option>
+            </mat-select>
+        </mat-form-field>
 
+        <mat-form-field *ngIf="checked">
+            <input matInput placeholder="Enter Destination Point">
+        </mat-form-field>  
+       
+    <br><br>
 
-
-
-
-
-
-
-<!-- <div>
-<h1>Tell us your Starting Point</h1>
-<div>
-  Enter Your City :<input type="text" placeholder="Enter Your City"><br><br>
-  Tell us your Starting Point : <input type="text" placeholder="Enter Starting Point"><br><br>
-  Tell us your Drop Location : <input type="text" placeholder="Enter Dropping Point"><br><br>
-  <button (click)="getPlace()">Submit</button>
+    <button (click)="getPlace()" mat-flat-button color="primary">Submit</button>
 </div>
+
+
+
+
+
+<!-- <div class="example-container">
+    <h1>Tell us your Starting Point</h1>
+    <mat-form-field>
+        <mat-select placeholder="Select Your City">
+          <mat-option value="option">Delhi NCR</mat-option>
+          <mat-option value="option">Hyderabad</mat-option>
+          <mat-option value="option">Visakhapatnam</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Enter Starting Point">
+    </mat-form-field>
+
+    <mat-card  class="result">
+        <mat-card-content>
+            <mat-checkbox class="example-margin" [(ngModel)]="checked">I want to drop my car in a different city</mat-checkbox>
+        </mat-card-content>
+      
+    <mat-card *ngIf="checked"  class="example-section" >
+      <mat-card-content>    
+            <mat-form-field>
+                <mat-select placeholder="Select Your City">
+                  <mat-option value="option">Delhi NCR</mat-option>
+                  <mat-option value="option">Hyderabad</mat-option>
+                  <mat-option value="option">Visakhapatnam</mat-option>
+                </mat-select>
+            </mat-form-field>
+          <mat-form-field>
+           <input matInput placeholder="Enter Destination Point">
+          </mat-form-field>      
+      </mat-card-content>    
+    </mat-card>
+
+    </mat-card>
+
+    <br><br>
+    <button (click)="getPlace()" mat-flat-button color="primary">Submit</button>
 </div> -->

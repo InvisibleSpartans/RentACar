@@ -7,12 +7,7 @@ import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 })
 export class BookingComponent implements OnInit {
 
-  @Input() pickUpLoc: string;
-  @Input() dropLoc: string;
-  @Input() distance:string;
-  @Output() pickUpLocChanged = new EventEmitter<string>();
-  // @Output() dropLocChanged = new EventEmitter<string>();
-  // @Output() distanceLocChanged = new EventEmitter<string>();
+  checked = false;
   constructor() { }
 
   ngOnInit() {

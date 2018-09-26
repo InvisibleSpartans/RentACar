@@ -5,12 +5,19 @@ import {MatButtonModule, MatCheckboxModule, MatSelectModule, MatInputModule, Mat
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
+import { CarDetailsComponent } from './car-details/car-details.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+
 import { BookingComponent } from './components/booking/booking.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
+    CarDetailsComponent,
+    LoginComponent,
+    SignupComponent,
     BookingComponent
   ],
   imports: [

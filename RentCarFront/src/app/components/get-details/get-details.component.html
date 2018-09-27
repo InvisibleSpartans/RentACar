@@ -1,0 +1,75 @@
+<mat-horizontal-stepper #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup"  (ngSubmit)="form1()" #formone="ngForm">
+        <ng-template matStepLabel>Starting Point</ng-template>
+        <div class="example-container">
+        <mat-form-field>
+            <mat-select placeholder="Select Your City">
+                <mat-option value="option">Delhi NCR</mat-option>
+                <mat-option value="option">Hyderabad</mat-option>
+                <mat-option value="option">Visakhapatnam</mat-option>
+            </mat-select>
+        </mat-form-field><br>
+        <mat-form-field>
+        <input matInput placeholder="Enter Starting Point">
+      </mat-form-field><br>
+      <mat-checkbox class="mat-checkbox-layout" [(ngModel)]="checked" [ngModelOptions]="{standalone: true}">I want to drop my car in a different city</mat-checkbox>
+    <br>
+        <mat-form-field *ngIf="checked">
+            <mat-select placeholder="Select Your City">
+              <mat-option value="option">Delhi NCR</mat-option>
+              <mat-option value="option">Hyderabad</mat-option>
+              <mat-option value="option">Visakhapatnam</mat-option>
+            </mat-select>
+        </mat-form-field><br>
+
+        <mat-form-field *ngIf="checked">
+            <input matInput placeholder="Enter Destination Point">
+        </mat-form-field><br>
+        <div>
+          <button mat-raised-button matStepperNext color="primary">Next</button>
+        </div>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup" (ngSubmit)="form2()" #formtwo="ngForm">
+        <ng-template matStepLabel>Pickup Date</ng-template>
+        <div class="example-container">
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Choose Your Pickup date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <div>
+              <button mat-raised-button matStepperPrevious color="primary">Back</button>
+              <button mat-raised-button matStepperNext color="primary" style="float:right">Next</button>
+        </div>
+        </div>
+      </form>
+    </mat-step>
+
+<mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup" (ngSubmit)="form3()" #formthree="ngForm">
+      <ng-template matStepLabel>Drop Date</ng-template>
+      <div class="example-container">
+          <mat-form-field>
+              <input matInput [matDatepicker]="dropper" placeholder="Choose Your Drop date">
+              <mat-datepicker-toggle matSuffix [for]="dropper"></mat-datepicker-toggle>
+              <mat-datepicker #dropper></mat-datepicker>
+            </mat-form-field>
+            <div>
+            <button mat-raised-button matStepperPrevious color="primary">Back</button>
+            <button mat-raised-button color="primary" type="button" (click)="formone.ngSubmit.emit();formtwo.ngSubmit.emit();formthree.ngSubmit.emit()" style="float:right">
+                Submit
+            </button>
+            </div><br>
+            <div class="example-container1">
+                <button mat-raised-button (click)="stepper.reset()" color="primary">Reset</button>
+            </div>
+      </div>
+    </form>
+    </mat-step>
+</mat-horizontal-stepper>

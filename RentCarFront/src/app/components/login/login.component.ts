@@ -1,4 +1,5 @@
 import {Component,OnInit} from '@angular/core';
+import { SignupComponent } from '../signup/signup.component';
 
 /**
  * @title Basic Inputs

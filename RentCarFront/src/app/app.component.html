@@ -1,10 +1,22 @@
 <div>
-  <!-- <h1>
-    Welcome to {{ title }}!
-  </h1> -->
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <span>Rent A CAR</span>
+          <span class="example-spacer"></span>
+          <button mat-raised-button color="primary"><a routerLink='/home'>Home</a></button>
+          <button mat-raised-button color="primary"><a routerLink='/'>Tariff</a></button>
+          <button mat-raised-button color="primary"><a routerLink='/get-details'>Book</a></button>
+          <button mat-raised-button color="primary"><a routerLink='/login'>Login</a></button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    
+<!-- <app-home></app-home> -->
  <!-- <app-login></app-login> -->
  <!-- <app-signup></app-signup> -->
 
  
- <app-get-details></app-get-details>
+ <!-- <app-get-details></app-get-details> -->
+ <!-- <app-car-details></app-car-details> -->
 </div>
+
+<router-outlet></router-outlet>

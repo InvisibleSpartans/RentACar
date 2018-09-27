@@ -1,3 +1,12 @@
-h1{
-    text-align: center;
-}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  button{
+      margin-right: 10px;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }

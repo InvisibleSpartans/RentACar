@@ -1,28 +1,37 @@
 <div class="example-container">
     <h1>SignUp</h1>
     <mat-form-field>
-    <input matInput placeholder="FirstName"> 
+    <input matInput type="text"> 
+    <mat-placeholder class="placeholder">FirstName</mat-placeholder>
     </mat-form-field>
 
     <mat-form-field>
-    <input matInput placeholder="LastName"> 
+    <input matInput type="text"> 
+    <mat-placeholder class="placeholder">LastName</mat-placeholder>
     </mat-form-field>
 
     <mat-form-field>
-    <input matInput placeholder="EmailId"> 
+        <input matInput type="text">
+        <mat-placeholder class="placeholder">Email ID</mat-placeholder>
     </mat-form-field>
     
      <mat-form-field>
-     <input matInput placeholder="Username"> 
+            <input matInput type="text">
+            <mat-placeholder class="placeholder">Username</mat-placeholder>
      </mat-form-field>
 
      <mat-form-field>
-     <input matInput placeholder="Password"> 
-     </mat-form-field>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <mat-placeholder class="placeholder">Enter your password</mat-placeholder>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      </mat-form-field><br>
     
-     <mat-form-field>
-     <input matInput placeholder="ConfirmPassword"> 
-     </mat-form-field><br>
+      <mat-form-field>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <mat-placeholder class="placeholder">Confirm Password</mat-placeholder>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      </mat-form-field><br>
+
      <div>
             <button mat-flat-button>Submit</button>
      </div>

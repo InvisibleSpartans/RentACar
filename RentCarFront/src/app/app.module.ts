@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatNativeDateModule,MatButtonModule, MatCheckboxModule, MatSelectModule, MatInputModule, MatCardModule, MatStepperModule,  MatDatepickerModule} from '@angular/material';
+import { MatIconModule,MatToolbarModule, MatNativeDateModule,MatButtonModule, MatCheckboxModule, MatSelectModule, MatInputModule, MatCardModule, MatStepperModule,  MatDatepickerModule} from '@angular/material';
 import 'hammerjs';
 import {RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
@@ -13,12 +13,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GetDetailsComponent } from './components/get-details/get-details.component';
 import { HomeComponent } from './components/home/home.component';
+
 const routes: Routes=[
 {path:'home', component:HomeComponent},
 {path:'login',component:LoginComponent},
 {path:'signup',component:SignupComponent},
 {path:'get-details',component:GetDetailsComponent}
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +47,7 @@ const routes: Routes=[
     MatDatepickerModule,
     MatNativeDateModule,
     MatToolbarModule,
+    MatIconModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

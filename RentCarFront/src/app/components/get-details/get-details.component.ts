@@ -34,11 +34,11 @@ export class GetDetailsComponent implements OnInit {
     console.log(this.firstFormGroup.value);
   }
 
-  form2(){
+ form2(){
     console.log(this.secondFormGroup.value);
   }
 
-  form3(){
+form3(){
     console.log(this.thirdFormGroup.value);
   }
 

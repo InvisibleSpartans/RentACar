@@ -3,8 +3,8 @@
   flex-direction: column;
   padding-left: 30%;
   padding-right:30%;
-  background-color:whitesmoke;
-  opacity: 0.9;
+  background-color:transparent;
+  /* opacity: 0.84; */
   height:88.5vh;
 }
 
@@ -17,4 +17,7 @@ h1{
 
 button,a{
     width:100%;
+}
+.placeholder {
+  color:black;
 }

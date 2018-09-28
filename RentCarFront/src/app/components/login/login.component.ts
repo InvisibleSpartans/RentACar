@@ -10,6 +10,8 @@ import { SignupComponent } from '../signup/signup.component';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit  {
+  hide = true;
+  
   constructor() { }
 
   ngOnInit() {

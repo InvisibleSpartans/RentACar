@@ -14,6 +14,7 @@ namespace RentACarApi.Models
             }
             public DbSet<Register> RegisterItems { get; set; }
             public DbSet<Booking> BookingItems { get; set; }
+            //public DbSet<CarDetails> CarItems { get; set; }
     }
 }
 

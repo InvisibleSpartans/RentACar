@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { BookingService } from '../../services/booking.service';
 
 @Component({
   selector: 'app-get-details',
@@ -13,7 +14,7 @@ export class GetDetailsComponent implements OnInit {
   thirdFormGroup:FormGroup;
   lat: number = 51.678418;
   lng: number = 7.809007;
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: FormBuilder,private api: BookingService) { }
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -45,6 +46,7 @@ export class GetDetailsComponent implements OnInit {
 
 form3(){
     console.log(this.thirdFormGroup.value);
+    this.api.postQuestion(this.firstFormGroup.value);
   }
 
 }

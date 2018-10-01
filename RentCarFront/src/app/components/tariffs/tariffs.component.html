@@ -1,0 +1,11 @@
+<div class="container">
+<div *ngFor="let val of listval">
+    <mat-grid-list cols="4" rowHeight="3:1" >
+        <mat-grid-tile><img src="../../../assets/images/{{val.img_val}}" class="img-set"></mat-grid-tile>
+        <mat-grid-tile><h5>{{val.Description}}</h5></mat-grid-tile>
+        <mat-grid-tile><h5>{{val.Seater}} Seater</h5></mat-grid-tile>
+        <mat-grid-tile><h5>Rate : {{val.Price}} /km</h5></mat-grid-tile>
+      </mat-grid-list>
+      <hr>
+</div>
+</div>

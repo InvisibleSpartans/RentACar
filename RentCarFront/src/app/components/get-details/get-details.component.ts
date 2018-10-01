@@ -11,17 +11,22 @@ export class GetDetailsComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup:FormGroup;
+  lat: number = 51.678418;
+  lng: number = 7.809007;
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
+      Pickup_city: ['', Validators.required],
+      Pickup_address: ['', Validators.required],
+      Drop_city: ['', Validators.required],
+      Drop_address: ['', Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
+      Pickup_date: ['', Validators.required]
     });
     this.thirdFormGroup = this._formBuilder.group({
-      thirdCtrl: ['', Validators.required]
+      Drop_date: ['', Validators.required]
     });
   }
 

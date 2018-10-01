@@ -3,6 +3,7 @@
     flex-direction: column;
     padding-left: 25%;
     padding-right: 25%;
+    width:50%;
     height:74vh;
     opacity:0.88;
   }
@@ -19,4 +20,11 @@
   mat-horizontal-stepper{
     background-color:transparent;
     /* opacity:0.84; */
+  }
+
+  agm-map {
+    width:40%;
+    height: 300px;
+    padding-left: 25%;
+    padding-right: 25%;
   }

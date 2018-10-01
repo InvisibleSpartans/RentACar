@@ -1,1 +1,62 @@
+<div class="jumbotron">
 <a class="search" mat-flat-button routerLink="/get-details">Start your wonderful journey</a>
+</div>
+<div class="card-container">
+        <mat-grid-list cols="5" rowHeight="2:4">
+            <mat-grid-tile><mat-card class="example-card">
+          
+                <img mat-card-image src="../assets/images/card1.JPG" >
+                <mat-card-content>
+                  <p>  
+                      Search for and book a car on our site!
+                  </p>
+                </mat-card-content>
+                
+              </mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card class="example-card">
+          
+                <img mat-card-image src="../assets/images/card2.JPG" >
+                <mat-card-content>
+                  <p>  
+                      Upload your driver’s license, and pay a small security deposit.
+                  </p>
+                </mat-card-content>
+                
+              </mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card class="example-card">
+          
+                <img mat-card-image src="../assets/images/card3.JPG" >
+                <mat-card-content>
+                  <p>  
+                      We SMS your car details 20 minutes before pickup.Unlock it via the Zoomcar app.
+                  </p>
+                </mat-card-content>
+                
+              </mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card class="example-card">
+          
+                <img mat-card-image src="../assets/images/card4.JPG" >
+                <mat-card-content>
+                  <p>  
+                      Fill the start checklist in the Zoomcar app. Grab the keys from the glove-box and drive.
+                  </p>
+                </mat-card-content>
+                
+              </mat-card></mat-grid-tile>
+             <mat-grid-tile><mat-card class="example-card">
+          
+                <img mat-card-image src="../assets/images/card5.JPG" >
+                <mat-card-content>
+                  <p>  
+                      Return the car to the same location and fill the end checklist to end your trip.
+                  </p>
+                </mat-card-content>
+                
+              </mat-card></mat-grid-tile>
+          </mat-grid-list>
+    </div>
+    <div class="map">
+            <agm-map [latitude]="lat" [longitude]="lng">
+                    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+            </agm-map>
+    </div>

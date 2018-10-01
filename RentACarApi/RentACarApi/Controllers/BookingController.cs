@@ -20,9 +20,10 @@ namespace RentACarApi.Controllers
             {
                 // Create a new TodoItem if collection is empty,
                 // which means you can't delete all TodoItems.
+               // _context.CarItems.Add(new CarDetails {CarName = "Tiago", CarRate = 10 });
                 _context.BookingItems.Add(new Booking {
                     Pickup_city = "Item1",
-                    Pickup_address = "Item2",
+                    Pickup_address = "Item2"
                 });
                 _context.SaveChanges();
             }

@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { CarDetailsComponent } from './components/car-details/car-details.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { BookingService } from "./services/booking.service";
+import {HttpClientModule} from '@angular/common/http';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -54,9 +56,10 @@ const routes: Routes=[
     RouterModule.forRoot(routes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAfJTVKnpLl0ULuuwDuix-9ANpyQhP6mfc'
-    })
+    }),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BookingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

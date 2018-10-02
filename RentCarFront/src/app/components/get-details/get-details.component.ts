@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-
+import { BookingService } from "./../../services/booking.service";
+import { BookingDetails } from "../../models/BookingDetails.model";
 @Component({
   selector: 'app-get-details',
   templateUrl: './get-details.component.html',
@@ -13,9 +14,11 @@ export class GetDetailsComponent implements OnInit {
   thirdFormGroup:FormGroup;
   lat: number = 51.678418;
   lng: number = 7.809007;
-  constructor(private _formBuilder: FormBuilder) { }
+  booking: BookingDetails;
+  constructor(private _formBuilder: FormBuilder,private api: BookingService) { }
 
   ngOnInit() {
+    this.booking = {Pickup_city:'', Pickup_address:'',Drop_city:'',Drop_address:''};
     this.firstFormGroup = this._formBuilder.group({
       Pickup_city: ['', Validators.required],
       Pickup_address: ['', Validators.required],
@@ -36,6 +39,8 @@ export class GetDetailsComponent implements OnInit {
   }
   
   form1(){
+    
+  console.log(this.firstFormGroup.get('Pickup_city').value);
     console.log(this.firstFormGroup.value);
   }
 
@@ -44,7 +49,14 @@ export class GetDetailsComponent implements OnInit {
   }
 
 form3(){
-    console.log(this.thirdFormGroup.value);
+  this.booking.Pickup_city=this.firstFormGroup.get('Pickup_city').value;
+  this.booking.Pickup_address=this.firstFormGroup.get('Pickup_city').value;
+  this.booking.Drop_city=this.firstFormGroup.get('Drop_city').value;
+  this.booking.Drop_address=this.firstFormGroup.get('Drop_address').value;
+  this.booking.Pickup_date=this.secondFormGroup.get('Pickup_date').value;
+  this.booking.Drop_date=this.thirdFormGroup.get('Drop_date').value;
+  console.log(this.booking);
+  this.api.postQuestion(this.booking);
   }
 
 }

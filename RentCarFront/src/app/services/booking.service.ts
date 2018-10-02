@@ -11,10 +11,10 @@ postQuestion(form){
     console.log("service form", form);
     this.booking=form;
     console.log("service",this.booking);
-    this.http.post('https://localhost:44310/api/booking',
-    form).subscribe(res => {
-    console.log(res)
-    })
+    // this.http.post('https://localhost:44310/api/booking',
+    // form).subscribe(res => {
+    // console.log(res)
+    // })
 }
 getDetails(){
     return this.booking;

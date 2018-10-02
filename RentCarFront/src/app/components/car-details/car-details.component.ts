@@ -19,7 +19,7 @@ export class CarDetailsComponent implements OnInit {
   constructor(public api:BookingService) { }
 
   ngOnInit() {
-    this.booking = {Pickup_city:'84848', Pickup_address:'',Drop_city:'',Drop_address:''};
+    this.booking = {Pickup_city:'', Pickup_address:'',Drop_city:'',Drop_address:''};
     this.booking=this.api.getDetails();
     console.log('Car page Booking',this.api.getDetails(),'vvvvvvv', this.booking);
     this.listval=[

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-export interface hotelList{
+import{BookingDetails} from '../../models/BookingDetails.model';
+import{BookingService} from '../../services/booking.service';
+export interface carList{
   img_val:string;
   Description:string;
   Seater:number;
@@ -13,11 +14,14 @@ export interface hotelList{
   styleUrls: ['./car-details.component.css']
 })
 export class CarDetailsComponent implements OnInit {
-  listval:hotelList[];
-  constructor() { }
+  listval:carList[];
+  booking: BookingDetails;
+  constructor(public api:BookingService) { }
 
   ngOnInit() {
-    
+    this.booking = {Pickup_city:'84848', Pickup_address:'',Drop_city:'',Drop_address:''};
+    this.booking=this.api.getDetails();
+    console.log('Car page Booking',this.api.getDetails(),'vvvvvvv', this.booking);
     this.listval=[
       {"img_val":"a1.JPG","Description":"Mahindra KUV 100 ","Seater":5,"Price":500},
       {"img_val":"a2.JPG","Description":"Ford Figo ","Seater":5,"Price":1000},

@@ -8,6 +8,7 @@ constructor(private http: HttpClient) {
     this.booking = {Pickup_city:'', Pickup_address:'',Drop_city:'',Drop_address:''};
 }
 postQuestion(form){
+    console.log("service form", form);
     this.booking=form;
     console.log("service",this.booking);
     this.http.post('https://localhost:44310/api/booking',

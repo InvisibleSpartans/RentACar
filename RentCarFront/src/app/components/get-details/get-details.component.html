@@ -10,8 +10,8 @@
                 <mat-option value="Visakhapatnam">Visakhapatnam</mat-option>
             </mat-select>
         </mat-form-field><br>
-        <mat-form-field>
-        <input matInput placeholder="Enter Starting Point" formControlName="Pickup_address">
+        <mat-form-field appGooglePlaces>
+        <input matInput appGooglePlaces placeholder="Enter Starting Point" formControlName="Pickup_address">
       </mat-form-field><br>
       <mat-checkbox class="mat-checkbox-layout" [(ngModel)]="checked" [ngModelOptions]="{standalone: true}">I want to drop my car in a different city</mat-checkbox>
     <br>

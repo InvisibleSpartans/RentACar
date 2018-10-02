@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatGridListModule,MatIconModule,MatToolbarModule, MatNativeDateModule,MatButtonModule, MatCheckboxModule, MatSelectModule, MatInputModule, MatCardModule, MatStepperModule,  MatDatepickerModule} from '@angular/material';
+import { MatSidenavModule,MatGridListModule,MatIconModule,MatToolbarModule, MatNativeDateModule,MatButtonModule, MatCheckboxModule, MatSelectModule, MatInputModule, MatCardModule, MatStepperModule,  MatDatepickerModule} from '@angular/material';
 import 'hammerjs';
 import {RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
@@ -17,12 +17,14 @@ import { GetDetailsComponent } from './components/get-details/get-details.compon
 import { HomeComponent } from './components/home/home.component';
 
 import { AgmCoreModule } from '@agm/core';
-
+import { TariffsComponent } from './components/tariffs/tariffs.component';
 const routes: Routes=[
 {path:'home', component:HomeComponent},
 {path:'login',component:LoginComponent},
 {path:'signup',component:SignupComponent},
-{path:'get-details',component:GetDetailsComponent}
+{path:'get-details',component:GetDetailsComponent},
+{path:'car-details',component:CarDetailsComponent},
+{path:'tariff',component:TariffsComponent}
 ];
 
 @NgModule({
@@ -33,6 +35,7 @@ const routes: Routes=[
     SignupComponent,
     GetDetailsComponent,
     HomeComponent,
+    TariffsComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,9 @@ const routes: Routes=[
     MatNativeDateModule,
     MatToolbarModule,
     MatIconModule,
+    MatSidenavModule,
     MatGridListModule,
+    HttpClientModule,
     RouterModule.forRoot(routes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAfJTVKnpLl0ULuuwDuix-9ANpyQhP6mfc'

@@ -1,0 +1,38 @@
+.example-card {
+    width: 95%;
+  /* height:30px; */
+    }
+  
+    div{
+      height: 100px;
+    }
+    
+    .example-container {
+      position: absolute;
+      top: 80px;;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: whitesmoke;
+    }
+    .location
+    {
+      width: 300px;
+      border: 2px solid black;
+      padding: 25px;
+      margin: 25px;
+    }
+  
+    .date
+    {
+      width: 300px;
+      border: 2px solid black;
+      padding: 25px;
+      margin: 25px;
+    }
+
+    mat-drawer-content{
+        top:100px;
+        /* background-color:whitesmoke; */
+    }
+

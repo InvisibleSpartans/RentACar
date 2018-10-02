@@ -1,3 +1,39 @@
-<p>
-  car-details works!
-</p>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+      <div>
+        
+
+<div class="location  ">
+  <h3>Your Starting point is:</h3>
+  <h3>Your Dropping Point is:</h3>
+</div>
+
+     
+<div class="date">
+    <h3>PickUp Date:</h3>
+    <h3>DropOff Date:</h3>
+</div>   
+
+      </div>
+</mat-drawer>
+
+    <mat-drawer-content>
+      <div>
+          
+          <div *ngFor="let val of listval">
+          <mat-grid-list cols="5" rowHeight="3:1" >
+              <mat-grid-tile><img src="../../../assets/images/{{val.img_val}}" class="img-set"></mat-grid-tile>
+              <mat-grid-tile><h5>{{val.Description}}</h5></mat-grid-tile>
+              <mat-grid-tile><h5>{{val.Seater}} Seater</h5></mat-grid-tile>
+              <mat-grid-tile><h5>Rate : {{val.Price}}</h5></mat-grid-tile>
+              <mat-grid-tile><button mat-stroked-button color="primary">Book Now</button></mat-grid-tile>
+            </mat-grid-list>
+            <hr>
+          </div>
+          
+          
+
+          
+        </div>
+    </mat-drawer-content>
+  </mat-drawer-container>

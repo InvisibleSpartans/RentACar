@@ -22,11 +22,11 @@
           
           <div *ngFor="let val of listval">
           <mat-grid-list cols="5" rowHeight="3:1" >
-              <mat-grid-tile><img src="../../../assets/images/{{val.img_val}}" class="img-set"></mat-grid-tile>
-              <mat-grid-tile><h5>{{val.Description}}</h5></mat-grid-tile>
-              <mat-grid-tile><h5>{{val.Seater}} Seater</h5></mat-grid-tile>
-              <mat-grid-tile><h5>Rate : {{val.Price}}</h5></mat-grid-tile>
-              <mat-grid-tile><button mat-stroked-button color="primary">Book Now</button></mat-grid-tile>
+              <mat-grid-tile><img src="../../../assets/images/a1.JPG" class="img-set"></mat-grid-tile>
+              <mat-grid-tile><h5>{{val.carName}}</h5></mat-grid-tile>
+              <mat-grid-tile><h5>{{val.carSeats}} Seater</h5></mat-grid-tile>
+              <mat-grid-tile><h5>Rate : {{val.carRate}}</h5></mat-grid-tile>
+              <mat-grid-tile><button mat-stroked-button color="primary" (click)="bookCar(val)" >Book Now</button></mat-grid-tile>
             </mat-grid-list>
             <hr>
           </div>

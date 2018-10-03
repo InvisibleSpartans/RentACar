@@ -7,7 +7,7 @@ export class BookingService {
 constructor(private http: HttpClient) {
     this.booking = {Pickup_city:'', Pickup_address:'',Drop_city:'',Drop_address:''};
 }
-postQuestion(form){
+sendDetails(form){
     console.log("service form", form);
     this.booking=form;
     console.log("service",this.booking);

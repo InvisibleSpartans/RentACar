@@ -20,8 +20,9 @@ namespace RentACarApi.Models
         public double DropLat { get; set; }
         public DateTime Pickup_date { get; set; }
         public DateTime Drop_date { get; set; }
-        public CarDetails CarId { get; set; }
-        public Int16 TotalPrice { get; set;}
+        public Int16 TotalPrice { get; set; }
+        public Int16 CarId { get; set; }
+        public CarDetails Car { get; set; }
 
     }
 }

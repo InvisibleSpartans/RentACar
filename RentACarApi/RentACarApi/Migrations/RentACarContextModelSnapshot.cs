@@ -25,7 +25,7 @@ namespace RentACarApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<short?>("CarIdId");
+                    b.Property<short>("CarId");
 
                     b.Property<double>("DropLat");
 
@@ -51,7 +51,7 @@ namespace RentACarApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CarIdId");
+                    b.HasIndex("CarId");
 
                     b.ToTable("BookingItems");
                 });
@@ -75,9 +75,10 @@ namespace RentACarApi.Migrations
 
             modelBuilder.Entity("RentACarApi.Models.Booking", b =>
                 {
-                    b.HasOne("RentACarApi.Models.CarDetails", "CarId")
+                    b.HasOne("RentACarApi.Models.CarDetails", "Car")
                         .WithMany()
-                        .HasForeignKey("CarIdId");
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

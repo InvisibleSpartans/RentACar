@@ -39,24 +39,24 @@ namespace RentACarApi.Migrations
                     DropLat = table.Column<double>(nullable: false),
                     Pickup_date = table.Column<DateTime>(nullable: false),
                     Drop_date = table.Column<DateTime>(nullable: false),
-                    CarIdId = table.Column<short>(nullable: true),
-                    TotalPrice = table.Column<short>(nullable: false)
+                    TotalPrice = table.Column<short>(nullable: false),
+                    CarId = table.Column<short>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_BookingItems", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BookingItems_CarItems_CarIdId",
-                        column: x => x.CarIdId,
+                        name: "FK_BookingItems_CarItems_CarId",
+                        column: x => x.CarId,
                         principalTable: "CarItems",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_BookingItems_CarIdId",
+                name: "IX_BookingItems_CarId",
                 table: "BookingItems",
-                column: "CarIdId");
+                column: "CarId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -26,6 +26,6 @@ export class CarDetailsComponent implements OnInit {
   //  ];
   }
   bookCar(carObj){
-    console.log("inside bookcar",carObj);
+    this.api.createBooking(carObj);
   }
   }

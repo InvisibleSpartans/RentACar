@@ -21,6 +21,7 @@ import { TariffsComponent } from './components/tariffs/tariffs.component';
 import { MybookingsComponent } from './components/mybookings/mybookings.component';
 
 const routes: Routes=[
+{path:'', component: HomeComponent},
 {path:'home', component:HomeComponent},
 {path:'login',component:LoginComponent},
 {path:'signup',component:SignupComponent},

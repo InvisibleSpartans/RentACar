@@ -1,3 +1,5 @@
+import { carList } from "../components/mybookings/mybookings.component";
+
 export interface BookingDetails{
     Pickup_city: string;
     Pickup_address: string;
@@ -9,7 +11,7 @@ export interface BookingDetails{
     DropLat?: any;
     Pickup_date?: Date;
     Drop_date?: Date;
-    CarId ?:number;
+    CarId ?:carList;
     TotalPrice?: number;
 }
 

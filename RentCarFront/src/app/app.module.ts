@@ -18,13 +18,16 @@ import { HomeComponent } from './components/home/home.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { TariffsComponent } from './components/tariffs/tariffs.component';
+import { MybookingsComponent } from './components/mybookings/mybookings.component';
+
 const routes: Routes=[
 {path:'home', component:HomeComponent},
 {path:'login',component:LoginComponent},
 {path:'signup',component:SignupComponent},
 {path:'get-details',component:GetDetailsComponent},
 {path:'car-details',component:CarDetailsComponent},
-{path:'tariff',component:TariffsComponent}
+{path:'tariff',component:TariffsComponent},
+{path:'myBookings',component:MybookingsComponent}
 ];
 
 @NgModule({
@@ -36,6 +39,7 @@ const routes: Routes=[
     GetDetailsComponent,
     HomeComponent,
     TariffsComponent,
+    MybookingsComponent,
   ],
   imports: [
     BrowserModule,

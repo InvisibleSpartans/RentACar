@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>My Bookings</h1>  
+    <div *ngFor="let val of listval">
+    <mat-grid-list cols="10" rowHeight="3:1" >
+        <mat-grid-tile><img src="../../../assets/images/a1.JPG" class="img-set"></mat-grid-tile>
+        <mat-grid-tile><h5>{{val.Id}}</h5></mat-grid-tile>
+        <mat-grid-tile><h5>{{val.Description}}</h5></mat-grid-tile>
+        <mat-grid-tile><h5>{{val.Pickup_city}}</h5></mat-grid-tile>
+        <mat-grid-tile><h5>{{val.Pickup_address}}</h5></mat-grid-tile>
+        <mat-grid-tile><h5>{{val.Drop_city}}</h5></mat-grid-tile>
+        <mat-grid-tile><h5>{{val.Drop_address}}</h5></mat-grid-tile>
+        <mat-grid-tile><h5>{{val.Pickup_date}}</h5></mat-grid-tile>
+        <mat-grid-tile><h5>{{val.Drop_date}}</h5></mat-grid-tile>
+        <mat-grid-tile><h5>Total : {{val.Price}}</h5></mat-grid-tile>
+        <br>
+    </mat-grid-list>
+    </div>   
+</div>

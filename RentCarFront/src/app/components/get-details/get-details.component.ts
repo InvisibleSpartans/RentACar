@@ -25,7 +25,8 @@ export class GetDetailsComponent implements OnInit {
       Pickup_city: ['', Validators.required],
       Pickup_address: ['', Validators.required],
       Drop_city: ['', Validators.required],
-      Drop_address: ['', Validators.required]
+      Drop_address: ['', Validators.required],
+
     });
     this.secondFormGroup = this._formBuilder.group({
       Pickup_date: ['', Validators.required]
@@ -58,7 +59,7 @@ form3(){
   this.booking.Pickup_date=this.secondFormGroup.get('Pickup_date').value;
   this.booking.Drop_date=this.thirdFormGroup.get('Drop_date').value;
   console.log("form3",this.booking);
-  this.api.postQuestion(this.booking);
+  this.api.sendDetails(this.booking);
   this.router.navigate(['/car-details']);
   }
 

@@ -7,7 +7,7 @@ namespace RentACarApi.Models
 {
     public class CarDetails
     {
-        public Int16 CarId { get; set; }
+        public Int16 Id { get; set; }
         public string CarName { get; set; }
         public Int16 CarRate { get; set; }
         public Int16 CarSeats { get; set; }

@@ -12,3 +12,17 @@ C:\Users\Administrator\Desktop\Rentacar\RentACar\RentACarApi\RentACarApi\obj\Deb
 C:\Users\Administrator\Desktop\Rentacar\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.RazorTargetAssemblyInfo.cache
 C:\Users\Administrator\Desktop\Rentacar\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.dll
 C:\Users\Administrator\Desktop\Rentacar\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.pdb
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\bin\Debug\netcoreapp2.1\RentACarApi.deps.json
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\bin\Debug\netcoreapp2.1\RentACarApi.runtimeconfig.json
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\bin\Debug\netcoreapp2.1\RentACarApi.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\bin\Debug\netcoreapp2.1\RentACarApi.dll
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\bin\Debug\netcoreapp2.1\RentACarApi.pdb
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.RazorAssemblyInfo.cache
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.RazorAssemblyInfo.cs
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.dll
+C:\Users\Administrator\Desktop\RentACar\RentACarApi\RentACarApi\obj\Debug\netcoreapp2.1\RentACarApi.pdb

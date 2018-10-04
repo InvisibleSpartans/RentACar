@@ -27,9 +27,12 @@ namespace RentACarApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<RentACarContext>(opt =>
-            opt.UseInMemoryDatabase("RentACarDB"));
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            var configure = @"Server=WIN-64PH0VNR9LR\SQLEXPRESS;Database=CarRental;Trusted_Connection=True;ConnectRetryCount=0"; ;
+            services.AddDbContext<RentACarContext>(options =>
+                    options.UseSqlServer(configure));
+            //services.AddDbContext<RentACarContext>(opt =>
+            //opt.UseInMemoryDatabase("RentACarDB"));
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddCors(options =>
             options.AddPolicy("Cors", builder =>
             {

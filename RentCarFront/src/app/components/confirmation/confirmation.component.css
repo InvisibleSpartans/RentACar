@@ -1,0 +1,20 @@
+h1{
+    font-size: 70px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h3{
+    font-size: 40px;
+    text-align: center;
+
+}
+h5{
+    font-size: 30px;
+    text-align: center;
+    color: blue ;
+}
+div{
+    padding-left: 20%;
+    font-size: 20px;
+}

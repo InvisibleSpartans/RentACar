@@ -10,6 +10,7 @@ import {Router} from '@angular/router';
 })
 export class GetDetailsComponent implements OnInit {
   checked = false;
+  isLinear=true;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup:FormGroup;

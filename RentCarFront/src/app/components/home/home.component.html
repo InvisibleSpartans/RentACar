@@ -1,18 +1,16 @@
+<div class="bg">
 <div class="jumbotron">
 <a class="search" mat-flat-button routerLink="/get-details">Start your wonderful journey</a>
 </div>
 <div class="card-container">
         <mat-grid-list cols="5" rowHeight="2:4">
-            <mat-grid-tile><mat-card class="example-card">
-          
+            <mat-grid-tile><mat-card class="example-card">        
                 <img mat-card-image src="../assets/images/card1.JPG" >
                 <mat-card-content>
-                  <p>  
-                      Search for and book a car on our site!
-                  </p>
-                </mat-card-content>
-                
+                  <p>   Search for and book a car on our site!</p>
+                </mat-card-content>               
               </mat-card></mat-grid-tile>
+
             <mat-grid-tile><mat-card class="example-card">
           
                 <img mat-card-image src="../assets/images/card2.JPG" >
@@ -60,3 +58,13 @@
                     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
             </agm-map>
     </div>
+
+      <mat-toolbar color="primary"  class="example-spacer">
+          <mat-toolbar-row>
+            <pre><span>Rent A CAR </span></pre>
+            <pre>Made with <i class="fa fa-heart"></i> by Invisible Spartans</pre>
+          </mat-toolbar-row>
+        </mat-toolbar>
+
+</div>
+        

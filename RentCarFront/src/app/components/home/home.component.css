@@ -1,3 +1,4 @@
+
 .jumbotron{
     width:100%;
 }
@@ -24,5 +25,10 @@
 
   agm-map {
     height: 300px;
-    width : 50%;
+    width : 100%;
+  }
+
+  .example-spacer{
+     padding-left:30%;
+     padding-right: 30%;
   }

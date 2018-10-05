@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  lat: number = 51.678418;
-  lng: number = 7.809007;
+  lat: number = 28.4726934;
+  lng: number = 77.0546059;
   constructor() { }
 
   ngOnInit() {

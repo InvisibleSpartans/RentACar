@@ -12226,11 +12226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\RentACar\\RentACarApi\\RentACarApi\\RentACarApi.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Rentacar\\RentACar\\RentACarApi\\RentACarApi\\RentACarApi.csproj",
       "projectName": "RentACarApi",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\RentACar\\RentACarApi\\RentACarApi\\RentACarApi.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\Rentacar\\RentACar\\RentACarApi\\RentACarApi\\RentACarApi.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\RentACar\\RentACarApi\\RentACarApi\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\Rentacar\\RentACar\\RentACarApi\\RentACarApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

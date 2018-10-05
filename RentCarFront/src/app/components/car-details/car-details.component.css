@@ -21,6 +21,7 @@
       border: 2px solid black;
       padding: 25px;
       margin: 25px;
+      height:30vh;
     }
   
     .date
@@ -29,6 +30,7 @@
       border: 2px solid black;
       padding: 25px;
       margin: 25px;
+      height:30vh;
     }
 
     mat-drawer-content{

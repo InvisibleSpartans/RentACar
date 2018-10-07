@@ -37,10 +37,10 @@ export class GetDetailsComponent implements OnInit {
     });
   }
 
-  getPlace()
-  {
-    console.log("It's working");
-  }
+  // getPlace()
+  // {
+  //   console.log("It's working");
+  // }
   
   form1(){
     

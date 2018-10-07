@@ -13,5 +13,6 @@ export interface BookingDetails{
     Drop_date?: Date;
     CarId ?:carList;
     TotalPrice?: number;
+    IdentityUserId?:string;
 }
 

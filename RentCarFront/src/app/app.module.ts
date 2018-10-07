@@ -9,6 +9,9 @@ import { CarDetailsComponent } from './components/car-details/car-details.compon
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { BookingService } from "./services/booking.service";
+import{SignInService} from './services/login.service';
+// import{BaseService} from './services/base.service';
+import{SignupService} from './services/signup.service';
 import {HttpClientModule} from '@angular/common/http';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -20,6 +23,13 @@ import { AgmCoreModule } from '@agm/core';
 import { TariffsComponent } from './components/tariffs/tariffs.component';
 import { MybookingsComponent } from './components/mybookings/mybookings.component';
 
+export function tokenGetter() {
+  return localStorage.getItem('access_token');
+}
+
+export function loginIdGetter() {
+  return localStorage.getItem('logInId');
+}
 const routes: Routes=[
 {path:'', component: HomeComponent},
 {path:'home', component:HomeComponent},
@@ -69,7 +79,7 @@ const routes: Routes=[
     }),
     HttpClientModule
   ],
-  providers: [BookingService],
+  providers: [BookingService,SignupService, SignInService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

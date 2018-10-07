@@ -1,16 +1,16 @@
+<form [formGroup]="LoginFormGroup" (ngSubmit)="Login()">
 <div class="example-container">
-  <br>
   <br>
   <h1>Login</h1>
   <br>
-  <br>
+
   <mat-form-field> 
-    <input matInput input type="text">
+    <input matInput input type="text" formControlName="UserName" required>
     <mat-placeholder class="placeholder">Enter Username</mat-placeholder>
   </mat-form-field>
 <br>
   <mat-form-field>
-    <input dividerColor="primary" matInput [type]="hide ? 'password' : 'text'">
+    <input dividerColor="primary" matInput [type]="hide ? 'password' : 'text'" formControlName="Password" required>
     <mat-placeholder class="placeholder">Enter your password</mat-placeholder>
     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
   </mat-form-field>
@@ -23,6 +23,7 @@
       <a mat-flat-button routerLink='/signup'>Register</a>
   </div>
 </div>
+</form>
 
 
 

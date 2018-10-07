@@ -1,35 +1,36 @@
+<form [formGroup]="signUpFormGroup" (ngSubmit)="SignUp()" #formthree="ngForm">
 <div class="example-container">
     <h1>SignUp</h1>
     <mat-form-field>
-    <input matInput type="text"> 
+    <input matInput type="text" formControlName="FirstName" required> 
     <mat-placeholder class="placeholder">FirstName</mat-placeholder>
-    </mat-form-field>
+    </mat-form-field><br>
 
     <mat-form-field>
-    <input matInput type="text"> 
+    <input matInput type="text" formControlName="LastName"> 
     <mat-placeholder class="placeholder">LastName</mat-placeholder>
-    </mat-form-field>
+    </mat-form-field><br>
 
     <mat-form-field>
-        <input matInput type="text">
+        <input matInput type="text" formControlName="Email">
         <mat-placeholder class="placeholder">EmailId</mat-placeholder>
-    </mat-form-field>
+    </mat-form-field><br>
+
+    <mat-form-field>
+        <input matInput type="text" formControlName="UserName">
+        <mat-placeholder class="placeholder">Username</mat-placeholder>
+    </mat-form-field><br>
 
      <mat-form-field>
-        <input matInput [type]="hide ? 'password' : 'text'">
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="Password">
         <mat-placeholder class="placeholder">Password</mat-placeholder>
         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
       </mat-form-field><br>
-    
-      <!-- <mat-form-field>
-        <input matInput [type]="hide ? 'password' : 'text'">
-        <mat-placeholder class="placeholder">Confirm Password</mat-placeholder>
-        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-      </mat-form-field><br> -->
 
      <div>
-            <button mat-flat-button><a routerLink='/login' style="text-decoration: none;color:white">Submit</a></button>
+            <button mat-flat-button >Submit</button>
      </div>
     </div>
+</form>
 
     

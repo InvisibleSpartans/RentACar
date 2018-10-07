@@ -10,7 +10,6 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { BookingService } from "./services/booking.service";
 import{SignInService} from './services/login.service';
-// import{BaseService} from './services/base.service';
 import{SignupService} from './services/signup.service';
 import {HttpClientModule} from '@angular/common/http';
 

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatSidenavModule,MatGridListModule,MatIconModule,MatToolbarModule, MatNativeDateModule,MatButtonModule, MatCheckboxModule, MatSelectModule, MatInputModule, MatCardModule, MatStepperModule,  MatDatepickerModule} from '@angular/material';
+import { MatRadioModule,MatSidenavModule,MatGridListModule,MatIconModule,MatToolbarModule, MatNativeDateModule,MatButtonModule, MatCheckboxModule, MatSelectModule, MatInputModule, MatCardModule, MatStepperModule,  MatDatepickerModule} from '@angular/material';
 import 'hammerjs';
 import {RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
@@ -21,6 +21,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AgmCoreModule } from '@agm/core';
 import { TariffsComponent } from './components/tariffs/tariffs.component';
 import { MybookingsComponent } from './components/mybookings/mybookings.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { HeaderComponent } from './components/header/header.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -28,6 +30,9 @@ export function tokenGetter() {
 
 export function loginIdGetter() {
   return localStorage.getItem('logInId');
+}
+export function bookingIdGetter() {
+  return localStorage.getItem('BookingId');
 }
 const routes: Routes=[
 {path:'', component: HomeComponent},
@@ -37,7 +42,8 @@ const routes: Routes=[
 {path:'get-details',component:GetDetailsComponent},
 {path:'car-details',component:CarDetailsComponent},
 {path:'tariff',component:TariffsComponent},
-{path:'myBookings',component:MybookingsComponent}
+{path:'myBookings',component:MybookingsComponent},
+{path:'confirmation',component:ConfirmationComponent}
 ];
 
 @NgModule({
@@ -50,6 +56,8 @@ const routes: Routes=[
     HomeComponent,
     TariffsComponent,
     MybookingsComponent,
+    ConfirmationComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +79,7 @@ const routes: Routes=[
     MatIconModule,
     MatSidenavModule,
     MatGridListModule,
+    MatRadioModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
     AgmCoreModule.forRoot({

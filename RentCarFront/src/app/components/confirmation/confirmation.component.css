@@ -1,4 +1,32 @@
-h1{
+.example-card {
+    top:10px;
+    background-color:whitesmoke;
+    max-width: 60%;
+    margin-left:20%;
+    margin-right:20%;
+    height:500px;
+    padding:0px 0px 0px 0px;
+  }
+
+  mat-card-header{
+      background-color:navy;
+      color:white;
+  }
+
+  .container1{
+    background-color:whitesmoke;
+    padding-left:5%;
+    padding-right:20%;
+    padding-top:3%;
+    padding-bottom:3%;
+  }
+
+  .container2{
+    background-color:whitesmoke;
+    height:vh;
+  }
+
+/* h1{
     font-size: 70px;
     text-align: center;
     margin-top: 30px;
@@ -17,4 +45,4 @@ h5{
 div{
     padding-left: 20%;
     font-size: 20px;
-}
+} */

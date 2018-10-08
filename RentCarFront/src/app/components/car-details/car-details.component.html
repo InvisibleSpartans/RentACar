@@ -12,7 +12,17 @@
 <div class="date">
     <h3>PickUp Date:{{booking.Pickup_date}}</h3>
     <h3>DropOff Date:{{booking.Drop_date}}</h3>
-</div>   
+</div> 
+<div class="date">
+    <label><h3>Distance Required</h3></label><br>
+    <mat-radio-group class="example-radio-group" [(ngModel)]="distance">
+        <mat-radio-button class="example-radio-button" *ngFor="let distance of distances" [value]="distance" (click)="getdistance(distance)">
+          {{distance}} Kilometres
+        </mat-radio-button>
+    </mat-radio-group>
+    <h3>*Charges Will Be Applicable for Extra Kilometres as per Car Category</h3>
+      <!-- <div class="example-selected-value"><h3>Required Kilometres: {{distance}}</h3></div> -->
+</div>
 
       </div>
 </mat-drawer>
@@ -21,11 +31,12 @@
       <div>
           
           <div *ngFor="let val of listval">
-          <mat-grid-list cols="5" rowHeight="3:1" >
+          <mat-grid-list cols="6" rowHeight="3:1" >
               <mat-grid-tile><img src="../../../assets/images/a1.JPG" class="img-set"></mat-grid-tile>
               <mat-grid-tile><h5>{{val.carName}}</h5></mat-grid-tile>
               <mat-grid-tile><h5>{{val.carSeats}} Seater</h5></mat-grid-tile>
-              <mat-grid-tile><h5>Rate : {{val.carRate}}</h5></mat-grid-tile>
+              <mat-grid-tile><h5>Rate : {{val.carRate}}/Km</h5></mat-grid-tile>
+              <mat-grid-tile><h5> Total Price{{val.carRate * distance}}</h5></mat-grid-tile>
               <mat-grid-tile><button mat-stroked-button color="primary" (click)="bookCar(val)" >Book Now</button></mat-grid-tile>
             </mat-grid-list>
             <hr>

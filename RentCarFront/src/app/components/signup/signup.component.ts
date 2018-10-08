@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SignUp } from '../../models/SignUp.model';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
-import{UserService} from '../../services/login.service';
-import{BaseService} from '../../services/base.service';
+import{SignInService} from '../../services/login.service';
 import { BookingService } from '../../services/booking.service';
 import{SignupService} from '../../services/signup.service';
 @Component({

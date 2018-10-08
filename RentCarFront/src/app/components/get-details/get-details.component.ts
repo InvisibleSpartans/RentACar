@@ -17,8 +17,7 @@ export class GetDetailsComponent implements OnInit {
   lat: number = 51.678418;
   lng: number = 7.809007;
   booking: BookingDetails;
-  constructor(private _formBuilder: FormBuilder,public api: BookingService, private router: Router
-  ) { }
+  constructor(private _formBuilder: FormBuilder,public api: BookingService, private router: Router) { }
 
   ngOnInit() {
     this.booking = {Pickup_city:'', Pickup_address:'',Drop_city:'',Drop_address:''};
@@ -35,16 +34,11 @@ export class GetDetailsComponent implements OnInit {
     this.thirdFormGroup = this._formBuilder.group({
       Drop_date: ['', Validators.required]
     });
+
   }
 
-  // getPlace()
-  // {
-  //   console.log("It's working");
-  // }
-  
   form1(){
-    
-  console.log(this.firstFormGroup.get('Pickup_city').value);
+    console.log(this.firstFormGroup.get('Pickup_city').value);
     console.log(this.firstFormGroup.value);
   }
 

@@ -7,14 +7,13 @@ import { loginIdGetter } from '../app.module';
 @Injectable()
 export class BookingService {
     distance: number;
-
+    flagBooking=false;
     booking: BookingDetails;
 
     customersObservable : Observable<carList[]>;
     data: carList;
 
 constructor(private http: HttpClient) {
-    this.distance=150;
     this.booking = {Pickup_city:'', Pickup_address:'',Drop_city:'',Drop_address:''};
 }
 
@@ -28,20 +27,34 @@ getDetails(){
     return this.booking;
 }
 
+getKms(getdistance)
+{
+    this.distance=getdistance;
+}
+
 getCarDetails():Observable<carList[]>{
     var data=this.http.get<carList[]>('https://localhost:44310/api/cardetails');
     return data;
 }
 
 createBooking(data){
+    console.log(this.distance);
     this.booking.TotalPrice=this.distance * data.carRate;
+    console.log(this.booking.TotalPrice);
     this.booking.CarId=data.id;
     this.booking.IdentityUserId=loginIdGetter();
     console.log("Final Data",JSON.stringify(this.booking));
-    this.http.post('https://localhost:44310/api/bookings',
+    this.flagBooking=false;
+    this.http.post<any>('https://localhost:44310/api/bookings',
     this.booking).subscribe(res => {
+        localStorage.setItem('BookingId',res.id);
+        this.flagBooking=true;
     console.log(res)
     })
-    console.log("Ho gya");
+
+}
+getBookingDetails(id):Observable<any>{
+     return this.http.get<any>('https://localhost:44310/api/bookings/'+id);
+    // return this.http.get().<  
 }
 }

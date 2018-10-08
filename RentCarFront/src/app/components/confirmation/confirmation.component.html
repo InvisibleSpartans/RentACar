@@ -1,6 +1,31 @@
-<h1>Thanks!</h1>
-<h3>Your booking is confirmed.</h3>
-<h5>Your booking details are:</h5>
+<mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title><h1><b>Confirmation Page</b></h1></mat-card-title>
+          <mat-card-subtitle style="color:white"><h2><b>Thank You! Your Booking is Confirmed</b></h2></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="container1" *ngIf="flag">
+                <h3>Pickup city :{{booking.pickup_city}}</h3>
+                <h3>Starting point :{{ booking.pickup_address}}</h3>
+                <h3>Drop city point :{{ booking.drop_city }}</h3>
+                <h3>Dropping point :{{ booking.drop_address }}</h3>
+                <h3>Pickup date :{{ booking.pickup_date }}</h3>
+                <h3>Drop date :{{ booking.drop_date }}</h3>
+                <h3>CarId is :{{ booking.carId }}</h3>
+                <h3>TotalPrice :{{ booking.totalPrice }}</h3>
+            </div>
+            <button mat-raised-button color="primary" style="float:right">Confirm</button>
+        </mat-card-content>
+        <!-- <mat-card-actions>
+        <div class="container2">
+          <button mat-raised-button color="primary">Cancel</button>
+          <button mat-raised-button>Confirm</button>
+        </div>
+        </mat-card-actions> -->
+</mat-card>
+<!-- <h1>Thanks!</h1>
+<h3> booking is confirmed.</h3>
+<h5> booking details are:</h5>
 <div>
 <label>Booking Id:</label><br>
 <label>CarId:</label><br>
@@ -10,4 +35,4 @@
 <label> PickupLocation:</label><br>
 <label> DropDate:</label><br>
 <label> DropLocation:</label>
-</div>
+</div> -->

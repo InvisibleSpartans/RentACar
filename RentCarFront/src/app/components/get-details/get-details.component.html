@@ -19,7 +19,7 @@
       <mat-checkbox class="mat-checkbox-layout" [(ngModel)]="checked" [ngModelOptions]="{standalone: true}">I want to drop my car in a different city</mat-checkbox>
     <br>
         <mat-form-field *ngIf="checked">
-            <mat-select placeholder="Select Your City" formControlName="Drop_city" required>
+            <mat-select placeholder="Select Your City" formControlName="Drop_city">
                 <mat-option value="Delhi NCR">Delhi NCR</mat-option>
                 <mat-option value="Hyderabad">Hyderabad</mat-option>
                 <mat-option value="Bangalore">Bangalore</mat-option>
@@ -30,7 +30,7 @@
             <input matInput placeholder="Enter Destination Point" formControlName="Drop_address">
         </mat-form-field><br>
         <div>
-          <button mat-raised-button matStepperNext color="primary">Next</button>
+          <button mat-raised-button matStepperNext (click)="enable()" color="primary">Next</button>
         </div>
         
         </div>

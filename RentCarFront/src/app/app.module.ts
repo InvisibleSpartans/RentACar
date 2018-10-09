@@ -34,6 +34,12 @@ export function loginIdGetter() {
 export function bookingIdGetter() {
   return localStorage.getItem('BookingId');
 }
+
+export function loginFlagGetter() {
+  return localStorage.getItem('loginFlag');
+}
+localStorage.setItem('loginFlag','true');
+
 const routes: Routes=[
 {path:'', component: HomeComponent},
 {path:'home', component:HomeComponent},

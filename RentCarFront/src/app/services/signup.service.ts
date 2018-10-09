@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import{BehaviorSubject} from '../../../node_modules/rxjs';
 import{LoginCallBack} from '../models/LoginCallBack.model';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class SignupService {
@@ -15,14 +16,14 @@ export class SignupService {
 
   public loggedIn = false;
 
-constructor(private http: HttpClient) {
+constructor(private http: HttpClient, private router:Router) {
 }
 
 register(data){
     console.log("service register",data);
 var result=this.http.post('https://localhost:44310/api/registration', data)
 .subscribe(res => {
-  console.log(res)
+  console.log(res);
   });
   console.log(result);
 }  

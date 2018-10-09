@@ -35,7 +35,7 @@ namespace RentACarApi.Controllers
             var result = await userManager.CreateAsync(user, register.Password);
             if(result.Succeeded)
             {
-                var registerUser = new Register { IdentityId = user.Id,FirstName=register.FirstName,LastName= register.LastName,EmailId= register.Email };
+                var registerUser = new Register { IdentityUserId = user.Id,FirstName=register.FirstName,LastName= register.LastName,EmailId= register.Email };
                 await dbContext.RegisterItems.AddAsync(registerUser);
                 dbContext.SaveChanges();
                 return Ok("Account created");

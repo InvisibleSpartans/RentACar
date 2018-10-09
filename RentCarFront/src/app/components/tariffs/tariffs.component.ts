@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{BookingService} from '../../services/booking.service';
 import{carList} from '../../models/CarDetail.model';
+import{HeaderComponent} from '../header/header.component';
 // export interface carList{
 //   img_val:string;
 //   Description:string;

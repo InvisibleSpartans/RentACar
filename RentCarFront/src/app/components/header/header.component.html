@@ -1,3 +1,26 @@
-<p>
-  header works!
-</p>
+<div *ngIf="!loginFlag()">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <mat-icon><a [routerLink]="['/']">home</a></mat-icon>
+          <span>RentACar</span>
+          <span class="example-spacer"></span>
+          <button mat-raised-button color="primary"><a routerLink='/home'>Home</a></button>
+          <button mat-raised-button color="primary"><a routerLink='/tariff'>Tariff</a></button>
+          <button mat-raised-button color="primary"><a routerLink='/get-details'>Book</a></button>
+          <button mat-raised-button color="primary"><a routerLink='/login'>Login</a></button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+</div>
+<div *ngIf="loginFlag()">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <mat-icon><a [routerLink]="['/']">home</a></mat-icon>
+          <span>RentACar</span>
+          <span class="example-spacer"></span>
+          <button mat-raised-button color="primary"><a routerLink='/home'>Home</a></button>
+          <button mat-raised-button color="primary"><a routerLink='/tariff'>Tariff</a></button>
+          <button mat-raised-button color="primary"><a routerLink='/get-details'>Book</a></button>
+          <button mat-raised-button color="primary" (click)="logOut()">Log Out</button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+</div>

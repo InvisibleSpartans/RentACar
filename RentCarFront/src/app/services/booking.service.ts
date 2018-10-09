@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http'
 import{BookingDetails} from '../models/BookingDetails.model'
 import{carList} from '../models/CarDetail.model'
 import { loginIdGetter } from '../app.module';
+import { Router } from '@angular/router';
 @Injectable()
 export class BookingService {
     distance: number;
@@ -13,7 +14,7 @@ export class BookingService {
     customersObservable : Observable<carList[]>;
     data: carList;
 
-constructor(private http: HttpClient) {
+constructor(private http: HttpClient, private router:Router) {
     this.booking = {Pickup_city:'', Pickup_address:'',Drop_city:'',Drop_address:''};
 }
 
@@ -43,15 +44,19 @@ createBooking(data){
     console.log(this.booking.TotalPrice);
     this.booking.CarId=data.id;
     this.booking.IdentityUserId=loginIdGetter();
-    console.log("Final Data",JSON.stringify(this.booking));
     this.flagBooking=false;
+    if(this.booking.IdentityUserId){
     this.http.post<any>('https://localhost:44310/api/bookings',
     this.booking).subscribe(res => {
         localStorage.setItem('BookingId',res.id);
         this.flagBooking=true;
-    console.log(res)
-    })
-
+    console.log(res);
+    this.router.navigate(['/confirmation']);
+    });
+}
+else{
+    this.router.navigate(['/login']);
+}
 }
 getBookingDetails(id):Observable<any>{
      return this.http.get<any>('https://localhost:44310/api/bookings/'+id);

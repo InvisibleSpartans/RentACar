@@ -10,7 +10,6 @@ using RentACarApi.Models;
 
 namespace RentACarApi.Controllers
 {
-    [Authorize(Policy = "ApiUser")]
     [Route("api/[controller]")]
     [ApiController]
     public class CarDetailsController : ControllerBase

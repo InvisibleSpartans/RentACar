@@ -108,8 +108,8 @@ namespace RentACarApi.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(nullable: false),
-                    ProviderKey = table.Column<string>(nullable: false),
+                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
+                    ProviderKey = table.Column<string>(maxLength: 128, nullable: false),
                     ProviderDisplayName = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: false)
                 },
@@ -153,8 +153,8 @@ namespace RentACarApi.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(nullable: false),
-                    LoginProvider = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: false),
+                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
+                    Name = table.Column<string>(maxLength: 128, nullable: false),
                     Value = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -178,8 +178,7 @@ namespace RentACarApi.Migrations
                     LastName = table.Column<string>(nullable: true),
                     EmailId = table.Column<string>(nullable: true),
                     Password = table.Column<string>(nullable: true),
-                    IdentityUserId = table.Column<string>(nullable: true),
-                    IdentityId = table.Column<string>(nullable: true)
+                    IdentityUserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -208,6 +207,7 @@ namespace RentACarApi.Migrations
                     DropLat = table.Column<double>(nullable: false),
                     Pickup_date = table.Column<DateTime>(nullable: false),
                     Drop_date = table.Column<DateTime>(nullable: false),
+                    IdentityUserId = table.Column<string>(nullable: true),
                     TotalPrice = table.Column<short>(nullable: false),
                     CarId = table.Column<short>(nullable: false)
                 },
@@ -220,6 +220,12 @@ namespace RentACarApi.Migrations
                         principalTable: "CarItems",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BookingItems_AspNetUsers_IdentityUserId",
+                        column: x => x.IdentityUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -265,6 +271,11 @@ namespace RentACarApi.Migrations
                 name: "IX_BookingItems_CarId",
                 table: "BookingItems",
                 column: "CarId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BookingItems_IdentityUserId",
+                table: "BookingItems",
+                column: "IdentityUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RegisterItems_IdentityUserId",

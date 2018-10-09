@@ -5,6 +5,7 @@ import {Router} from '@angular/router';
 import { SignInService } from '../../services/login.service';
 import { tokenGetter, loginIdGetter } from '../../app.module';
 import { LoginCallBack } from '../../models/LoginCallBack.model';
+import{HeaderComponent} from '../header/header.component';
 /**
  * @title Basic Inputs
  */
@@ -28,6 +29,6 @@ export class LoginComponent implements OnInit  {
   }
   Login()
   {    
-    this.api.login(this.LoginFormGroup.value).subscribe(data =>console.log(data));
+    this.api.login(this.LoginFormGroup.value).subscribe(data =>{localStorage.setItem('loginFlag','true');console.log(data);this.router.navigate(['/home'])});
   }
 }

@@ -5,6 +5,8 @@ import {Router} from '@angular/router';
 import{SignInService} from '../../services/login.service';
 import { BookingService } from '../../services/booking.service';
 import{SignupService} from '../../services/signup.service';
+import{HeaderComponent} from '../header/header.component';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -14,9 +16,7 @@ export class SignupComponent implements OnInit {
 hide=true;
 UserDetails:SignUp;
 signUpFormGroup: FormGroup;
-  constructor(private _formBuilder: FormBuilder,private router: Router, public userService: SignupService) { 
-    console.log("constructor worked in signup");
-  }
+  constructor(private _formBuilder: FormBuilder,private router: Router, public userService: SignupService) { }
 
   ngOnInit() {
     this.UserDetails = {FirstName:'', LastName:'',UserName:'',Password:'',Email:''};
@@ -30,8 +30,7 @@ signUpFormGroup: FormGroup;
 }
 SignUp()
 {
-  console.log(this.signUpFormGroup.value);
   this.userService.register(this.signUpFormGroup.value);
-
+  this.router.navigate(['/login']);
 }
 }

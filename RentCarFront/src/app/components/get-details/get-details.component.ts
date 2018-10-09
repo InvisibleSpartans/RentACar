@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { BookingService } from "./../../services/booking.service";
 import { BookingDetails } from "../../models/BookingDetails.model";
 import {Router} from '@angular/router';
+import{HeaderComponent} from '../header/header.component';
 @Component({
   selector: 'app-get-details',
   templateUrl: './get-details.component.html',

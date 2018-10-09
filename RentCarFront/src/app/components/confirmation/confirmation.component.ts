@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BookingDetails } from '../../models/BookingDetails.model';
 import  {BookingService} from '../../services/booking.service';
 import{bookingIdGetter} from '../../app.module';
+import{HeaderComponent} from '../header/header.component';
 @Component({
   selector: 'app-confirmation',
   templateUrl: './confirmation.component.html',

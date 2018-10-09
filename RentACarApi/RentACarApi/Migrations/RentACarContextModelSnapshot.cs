@@ -136,9 +136,11 @@ namespace RentACarApi.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("ProviderKey");
+                    b.Property<string>("ProviderKey")
+                        .HasMaxLength(128);
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -169,9 +171,11 @@ namespace RentACarApi.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasMaxLength(128);
 
                     b.Property<string>("Value");
 
@@ -198,6 +202,8 @@ namespace RentACarApi.Migrations
 
                     b.Property<DateTime>("Drop_date");
 
+                    b.Property<string>("IdentityUserId");
+
                     b.Property<double>("PickUpLat");
 
                     b.Property<double>("PickUpLng");
@@ -213,6 +219,8 @@ namespace RentACarApi.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CarId");
+
+                    b.HasIndex("IdentityUserId");
 
                     b.ToTable("BookingItems");
                 });
@@ -243,8 +251,6 @@ namespace RentACarApi.Migrations
                     b.Property<string>("EmailId");
 
                     b.Property<string>("FirstName");
-
-                    b.Property<string>("IdentityId");
 
                     b.Property<string>("IdentityUserId");
 
@@ -310,6 +316,10 @@ namespace RentACarApi.Migrations
                         .WithMany()
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("IdentityUserId");
                 });
 
             modelBuilder.Entity("RentACarApi.Models.Register", b =>

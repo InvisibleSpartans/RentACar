@@ -15,6 +15,6 @@ namespace RentACarApi.Models
         public string Password { get; set; }
 
         public IdentityUser IdentityUser { get; set; }
-        public string IdentityId { get; set; }
+        public string IdentityUserId { get; set; }
     }
 }

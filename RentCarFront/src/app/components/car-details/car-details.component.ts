@@ -3,6 +3,7 @@ import{BookingDetails} from '../../models/BookingDetails.model';
 import{BookingService} from '../../services/booking.service';
 import{carList} from '../../models/CarDetail.model';
 import {Router} from '@angular/router';
+import{HeaderComponent} from '../header/header.component';
 
 @Component({
   selector: 'app-car-details',
@@ -42,7 +43,7 @@ export class CarDetailsComponent implements OnInit {
 
   bookCar(carObj){
     this.api.createBooking(carObj);
-    this.router.navigate(['/confirmation']);
+    // this.router.navigate(['/confirmation']);
   }
 
   }
